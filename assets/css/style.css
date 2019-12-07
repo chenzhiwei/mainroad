@@ -43,11 +43,14 @@ html {
 	-webkit-text-size-adjust: none;
 }
 
+body,button,input,select,textarea {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',sans-serif
+}
+
 body {
 	margin: 0;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	font-size: .875rem;
+	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.6;
 	word-wrap: break-word;
 	background: #f7f7f7;
@@ -57,7 +60,7 @@ body {
 .container {
 	position: relative;
 	width: 100%;
-	max-width: 1080px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -77,16 +80,16 @@ body {
 }
 
 .primary {
-	-webkit-flex: 1 0 65.83%;
-	flex: 1 0 65.83%;
+	-webkit-flex: 1 0 71.83%;
+	flex: 1 0 71.83%;
 	-webkit-order: 1;
 	order: 1;
 	min-width: 0;
 }
 
 .sidebar {
-	-webkit-flex: 1 0 31.66%;
-	flex: 1 0 31.66%;
+	-webkit-flex: 1 0 25.66%;
+	flex: 1 0 25.66%;
 	-webkit-order: 2;
 	order: 2;
 	min-width: 0;
@@ -120,7 +123,6 @@ select,
 optgroup,
 textarea {
 	margin: 0;
-	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
 }
@@ -167,6 +169,8 @@ h1 {
 h2 {
 	font-size: 24px;
 	font-size: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eaecef;
 }
 
 h3 {
@@ -256,7 +260,7 @@ pre,
 code,
 kbd,
 samp {
-	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-family: Consolas,'Panic Sans','DejaVu Sans Mono','Bitstream Vera Sans Mono',Menlo,'Microsoft Yahei',monospace;
 	font-size: inherit;
 }
 
@@ -302,6 +306,7 @@ blockquote {
 	margin: 0 0 1.25rem;
 	line-height: 1.6;
 	border-left: 5px solid {{ $highlightColor }};
+  background: #f5f5f5;
 }
 
 blockquote p:last-child {
@@ -335,13 +340,6 @@ abbr[title] {
 
 q {
 	font-style: italic;
-}
-
-address {
-	margin-bottom: 20px;
-	margin-bottom: 1.25rem;
-	font-family: "Consolas", Courier New, Courier, monospace;
-	line-height: 1.5;
 }
 
 dl {
@@ -1303,4 +1301,49 @@ textarea {
 		font-size: 11px;
 		font-size: .6875rem;
 	}
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+  }
+  .wrapper, .header {
+    background-color: #111;
+    color: #ccc;
+  }
+
+  pre, code {
+    background-color: #222;
+    color: #ccc;
+	  border: 1px solid #333;
+  }
+
+  .logo__title, a, h1, h2, h3, h4, h5, h6 {
+    color: #ccc;
+  }
+
+  h2 {
+    border-bottom: 1px solid #555;
+  }
+
+  .post-nav, .list__item {
+    border-bottom: 1px solid #888;
+  }
+
+  blockquote {
+    background: #222;
+  }
+
+  .pagination__item {
+    background-color: #2a2a2a;
+    color: #ccc;
+  }
+
+  .widget-search__form {
+    background: #222;
+  }
+  .widget-search__field {
+    background: #333;
+	  border: 1px solid #333;
+  }
 }
